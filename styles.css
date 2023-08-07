@@ -55,9 +55,8 @@ body{
 }
 #divContainer div{
 
-    height: 100px;
-    width: 100px;
-    background-color: white;
+
+    background-color: red;
     transition: 0.01s;
 }
 #divContainer div:hover{

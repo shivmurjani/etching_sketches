@@ -1,5 +1,5 @@
 const divContain = document.querySelector('#divContainer');
-
+let divNodes = divContain.childNodes;
 
 
 function createDiv(number,x){
@@ -18,6 +18,7 @@ function addDiv(number){
         case 16:
 
             createDiv(900,20);
+            
             //set style attributes
             break;
         
@@ -47,6 +48,12 @@ function addDiv(number){
 
         case 128:
             createDiv(16,150);
+            console.log(divNodes.length);
+            divNodes.forEach(node =>{
+                node.addEventListener('click',()=>{
+                    node.style.backgroundColor='blue';
+                });
+            });
             break;    
 
     }
@@ -73,6 +80,12 @@ pixelSlider.addEventListener('click',()=>{
     changePixel(pixel);
 });
 
+divNodes.forEach(node =>{
+    console.log(node);
+});
+divNodes.forEach(node =>{
+    console.log(node);
+});
 //eraser
 
 //erase
