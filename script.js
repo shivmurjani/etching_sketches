@@ -11,11 +11,14 @@ function createDiv(number,x){
 }
 
 function addDiv(number){
+    if(divContain.firstChild){
+        removeDiv();
+    }
     switch(number){
         case 16:
+
             createDiv(900,20);
             //set style attributes
-
             break;
         
         case 32:
@@ -50,14 +53,27 @@ function addDiv(number){
 
 }
 
-
 function removeDiv(){
     while(divContain.firstChild){
         divContain.removeChild(divContain.firstChild);
     }
 }
 
-addDiv(128);
+function changePixel(pixelSize){
+    addDiv(pixelSize);
+    return;
+}
+
+let pixelSlider = document.querySelector('.slider');
+let pixelValue = document.querySelector('#rangeValue');
+
+pixelSlider.addEventListener('click',()=>{
+    let pixel = (parseInt(pixelValue.textContent));
+    changePixel(pixel);
+});
+
+
+
 
 
    
