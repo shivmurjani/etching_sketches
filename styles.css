@@ -10,15 +10,18 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: #0c8fff;
+    font-weight: 800;
 }
 .section1{
 
 }
 #heading{
-    font-size: 40px;
+    font-size: 50px;
     margin-top: 10%;
-    padding: 10px;
+    padding: 0px;
+    color: #ffcc00;
+
 }
 .section2{
     margin-top: 5%;
