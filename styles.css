@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: blue;
+}
+#head{
+    margin: 20px;
+    padding: 40px;
+    font-size:40px;
+    height: 30px;
+    text-align: center;
+}
+#container{
+    margin: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width:  600px ;
+    height: 600px;
+    transition: 0.01s;
+    
+}
+#container div{
+    
+    width: 53.033px;
+    height: 53.033px;
+    transition: 0.05s;
+    
+}
+#border{
+    background-color: aliceblue;
+    border: 3px solid red;
+
+}
+
+div:hover{
+    opacity: 1;
+    background-color: red;
+}
