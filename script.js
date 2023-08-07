@@ -2,10 +2,10 @@ const divContain = document.querySelector('#divContainer');
 
 
 
-function createDiv(number,x,y){
+function createDiv(number,x){
     for(let i=0;i<number;i++){
     var newDiv = document.createElement('div');
-    newDiv.setAttribute('style','width:'+x+'px; height:'+y+'px;');
+    newDiv.setAttribute('style','width:'+x+'px; height:'+x+'px;');
     divContain.appendChild(newDiv);
 }
 }
@@ -13,37 +13,37 @@ function createDiv(number,x,y){
 function addDiv(number){
     switch(number){
         case 16:
-            createDiv(1,600,600);
+            createDiv(900,20);
             //set style attributes
 
             break;
         
         case 32:
-            createDiv(36,100,100);
+            createDiv(400,30);
 
             break;
         case 48:
-            createDiv(48);
+            createDiv(144,50);
             //set style attributes
             break;
         
         case 64:
-            createDiv(64);
+            createDiv(100,60);
             break;       
         case 80:
-            createDiv(80);
+            createDiv(64,75);
             //set style attributes
             break;
         
         case 96:
-            createDiv(96);
+            createDiv(36,100);
             break;
         case 112:
-            createDiv(112);
+            createDiv(25,120);
             break;  
 
         case 128:
-            createDiv(128);
+            createDiv(16,150);
             break;    
 
     }
@@ -56,7 +56,8 @@ function removeDiv(){
         divContain.removeChild(divContain.firstChild);
     }
 }
-addDiv(32);
+
+addDiv(128);
 
 
    
