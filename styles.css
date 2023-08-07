@@ -1,37 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&family=VT323&display=swap');
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'VT323', monospace;
 }
 body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: antiquewhite;
+}
+.section1{
+
+}
+#heading{
+    font-size: 40px;
+    margin-top: 10%;
+    padding: 10px;
 }
 .section2{
     margin-top: 5%;
     display: flex;
-    gap:50px;
+    gap: 50px;
 
 }
 #divContainer{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     width:600px;
     height: 600px;
-    background-color: red;
+    background-color: white;
+    gap: 0;
+    
 }
 #leftButtons{
     display: flex;
-    border: 2px solid black;
     align-items: flex-end;
 }
 #rightButtons{
 
 }
 #divContainer div{
+
     height: 100px;
     width: 100px;
     background-color: blue;
+    transition: 0.01s;
+}
+#divContainer div:hover{
+    background-color: blueviolet;
 }
