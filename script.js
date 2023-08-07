@@ -1,6 +1,7 @@
+
 const divContain = document.querySelector('#divContainer');
 let divNodes = divContain.childNodes;
-
+addDiv(32);
 
 function createDiv(number,x){
     for(let i=0;i<number;i++){
@@ -16,14 +17,22 @@ function addDiv(number){
     }
     switch(number){
         case 16:
-
             createDiv(900,20);
-            
+                divNodes.forEach(node =>{
+                    node.addEventListener('click',()=>{
+                    node.style.backgroundColor='blue';
+                });
+            });
             //set style attributes
             break;
         
         case 32:
             createDiv(400,30);
+                divNodes.forEach(node =>{
+                node.addEventListener('click',()=>{
+                node.style.backgroundColor='blue';
+            });
+        });
 
             break;
         case 48:
@@ -86,6 +95,20 @@ divNodes.forEach(node =>{
 divNodes.forEach(node =>{
     console.log(node);
 });
+
+let erase = document.querySelector('#erase')
+erase.addEventListener('click',()=>{
+    divNodes.forEach(node=>{
+        node.addEventListener('click',()=>{
+            node.style.backgroundColor='pink';
+        });
+    });
+});
+
+
+
+
+
 //eraser
 
 //erase
