@@ -67,11 +67,21 @@ function changePixel(pixelSize){
 let pixelSlider = document.querySelector('.slider');
 let pixelValue = document.querySelector('#rangeValue');
 
+//pixelSlider
 pixelSlider.addEventListener('click',()=>{
     let pixel = (parseInt(pixelValue.textContent));
     changePixel(pixel);
 });
 
+//eraser
+
+//erase
+
+//colorpalette
+
+//shader
+
+//DISCODISCO WHOO WHOO
 
 
 
