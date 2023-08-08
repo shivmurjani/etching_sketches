@@ -4,6 +4,10 @@ let divNodes = divContain.childNodes;
 const discoButton = document.querySelector('#disco');
 const shaderButton = document.querySelector('#shader');
 
+
+function randomColoredPixels(){
+    return Math.floor(Math.random()*16777215).toString(16);
+}
 addDiv(32);
 function defaultColor(){
     divNodes.forEach(node=>{
@@ -115,16 +119,25 @@ eraser.addEventListener('click',()=>{
     });
 
 
-    shaderButton.addEventListener('click',()=>{
-        divNodes.forEach(node=>{
-            const originalColor = tinycolor('white');
-            node.style.backgroundColor='white';
-            node.addEventListener('mouseover',()=>{
-                let varcolr = originalColor.darken(20).toString();
-                node.style.backgroundColor = varcolr;
-            });
+shaderButton.addEventListener('click',()=>{
+    divNodes.forEach(node=>{
+        node.style.backgroundColor='white'
+        node.style.opacity='0.1'
+        let currentOpacity = parseFloat(node.style.opacity);
+        node.addEventListener('mouseover',()=>{
+            currentOpacity+=0.1;
+            node.style.opacity=currentOpacity.toString();   
         });
     });
+});
+
+discoButton.addEventListener('click',()=>{
+    divNodes.forEach(node=>{
+        node.addEventListener('mouseover',()=>{
+            node.style.backgroundColor='#'+randomColoredPixels();
+        });
+    });
+});
 
 
 
