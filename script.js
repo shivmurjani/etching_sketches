@@ -122,9 +122,9 @@ eraser.addEventListener('click',()=>{
 
 shaderButton.addEventListener('click',()=>{
     divNodes.forEach(node=>{
-        node.style.backgroundColor='white'
-        node.style.opacity='0.1'
-        let currentOpacity = parseFloat(node.style.opacity);
+
+        let initialOpacity ='0.1';
+        let currentOpacity = parseFloat(initialOpacity);
         node.addEventListener('mouseover',()=>{
             currentOpacity+=0.2;
             node.style.opacity=currentOpacity.toString();   
@@ -134,8 +134,6 @@ shaderButton.addEventListener('click',()=>{
 
 discoButton.addEventListener('click',()=>{
     divNodes.forEach(node=>{
-        node.style.backgroundColor='white'
-        
         node.addEventListener('mouseover',()=>{
             node.style.opacity='1';
             node.style.backgroundColor='#'+randomColoredPixels();
@@ -145,10 +143,7 @@ discoButton.addEventListener('click',()=>{
 
 
 pen.addEventListener('click',()=>{
-    divNodes.forEach(node=>{
-        node.style.backgroundColor='white';
-        });
-        defaultColor();
+    defaultColor();
     });
 
 
