@@ -60,7 +60,7 @@ body{
     transition: 0.01s;
 }
 #divContainer div:hover{
-    background-color: blueviolet;
+    background-color: (0,0,0,100);
 }
 
 #slider{

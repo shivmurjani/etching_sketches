@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Etch-A-Sketch</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.1/tinycolor.min.js"></script>
 </head>
 <body>
     <div class="section1">
@@ -15,7 +16,7 @@
     <div class="section2">
         <div id="leftButtons">
             <div class="slider">
-                <center><p id="rangeValue" style="font-size: 20px;">Add Pixels here!</p></center>
+                <center><p id="rangeValue" style="font-size: 20px;">++Pixels here!--</p></center>
                 <input type="range" min="16" max="128" step="16" value="32" oninput="rangeValue.innerText = this.value">
             </div> 
             <button id="erase">Erase</button>
@@ -25,7 +26,6 @@
 
         </div>
         <div id="rightButtons">
-            <button id="colorpalette">Color Palette</button>
             <button id="shader">Shader</button>
             <button id="disco">DISCO</button>
         </div>

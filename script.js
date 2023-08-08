@@ -1,6 +1,9 @@
 
 const divContain = document.querySelector('#divContainer');
 let divNodes = divContain.childNodes;
+const discoButton = document.querySelector('#disco');
+const shaderButton = document.querySelector('#shader');
+
 addDiv(32);
 function defaultColor(){
     divNodes.forEach(node=>{
@@ -101,6 +104,7 @@ erase.addEventListener('click',()=>{
     });
 
 let eraser = document.querySelector('#eraser')
+
 eraser.addEventListener('click',()=>{
     divNodes.forEach(node=>{
             node.addEventListener('mouseover',()=>{
@@ -111,19 +115,17 @@ eraser.addEventListener('click',()=>{
     });
 
 
+    shaderButton.addEventListener('click',()=>{
+        divNodes.forEach(node=>{
+            const originalColor = tinycolor('white');
+            node.style.backgroundColor='white';
+            node.addEventListener('mouseover',()=>{
+                let varcolr = originalColor.darken(20).toString();
+                node.style.backgroundColor = varcolr;
+            });
+        });
+    });
 
-
-
-
-//eraser
-
-//erase
-
-//colorpalette
-
-//shader
-
-//DISCODISCO WHOO WHOO
 
 
 
