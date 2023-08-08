@@ -2,6 +2,13 @@
 const divContain = document.querySelector('#divContainer');
 let divNodes = divContain.childNodes;
 addDiv(32);
+function defaultColor(){
+    divNodes.forEach(node=>{
+        node.addEventListener('mouseover',()=>{
+            node.style.backgroundColor='black';
+        });
+    });
+}
 
 function createDiv(number,x){
     for(let i=0;i<number;i++){
@@ -18,51 +25,40 @@ function addDiv(number){
     switch(number){
         case 16:
             createDiv(900,20);
-                divNodes.forEach(node =>{
-                    node.addEventListener('click',()=>{
-                    node.style.backgroundColor='blue';
-                });
-            });
+            defaultColor();
             //set style attributes
             break;
         
         case 32:
             createDiv(400,30);
-                divNodes.forEach(node =>{
-                node.addEventListener('click',()=>{
-                node.style.backgroundColor='blue';
-            });
-        });
-
+            defaultColor();
             break;
         case 48:
             createDiv(144,50);
-            //set style attributes
+            defaultColor(); //set style attributes
             break;
         
         case 64:
             createDiv(100,60);
+            defaultColor();
             break;       
         case 80:
             createDiv(64,75);
-            //set style attributes
+            defaultColor();//set style attributes
             break;
         
         case 96:
             createDiv(36,100);
+            defaultColor();
             break;
         case 112:
             createDiv(25,120);
+            defaultColor();
             break;  
 
         case 128:
             createDiv(16,150);
-            console.log(divNodes.length);
-            divNodes.forEach(node =>{
-                node.addEventListener('click',()=>{
-                    node.style.backgroundColor='blue';
-                });
-            });
+            defaultColor();
             break;    
 
     }
@@ -99,11 +95,21 @@ divNodes.forEach(node =>{
 let erase = document.querySelector('#erase')
 erase.addEventListener('click',()=>{
     divNodes.forEach(node=>{
-        node.addEventListener('click',()=>{
-            node.style.backgroundColor='pink';
+            node.style.backgroundColor='white';
         });
+        defaultColor();
     });
-});
+
+let eraser = document.querySelector('#eraser')
+eraser.addEventListener('click',()=>{
+    divNodes.forEach(node=>{
+            node.addEventListener('mouseover',()=>{
+                node.style.backgroundColor='white';
+            })
+        });
+        
+    });
+
 
 
 
